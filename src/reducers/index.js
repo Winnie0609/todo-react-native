@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import todos from './todos'
-import filteredTodos from './filteredTodos'
+import filteredTodo from './filteredTodo'
 
 const rootReducer = combineReducers({
   todos: todos,
-  filteredTodos: filteredTodos
+  filteredTodo: filteredTodo
 })
 
 export default rootReducer

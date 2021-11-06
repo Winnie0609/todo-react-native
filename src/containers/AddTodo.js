@@ -4,10 +4,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { Ionicons } from '@expo/vector-icons'
 import { connect } from 'react-redux'
 import { addTodo, toggleTodo, deleteTodo } from '../actions/action'
-import TodoList from './TodoList'
 
 function AddTodo({ dispatch }) {
-  const todos = useSelector(state => state.todos)
   const [inputText, setInputText] = useState('')
 
   function inputHandleChange(text) {
@@ -38,14 +36,6 @@ function AddTodo({ dispatch }) {
             />
           </View>
         </TouchableOpacity>
-      </View>
-
-      <View>
-        <TodoList
-          todos={todos}
-          toggleTodo={toggleTodo}
-          deleteTodo={deleteTodo}
-        />
       </View>
     </View>
   )
