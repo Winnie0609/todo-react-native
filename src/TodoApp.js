@@ -4,8 +4,7 @@ import AddTodo from './containers/AddTodo'
 
 function TodoApp() {
   return (
-    <View>
-      <Text>hello ya</Text>
+    <View style={ styles.container }>
       <AddTodo/>
     </View>
   ) 
@@ -14,5 +13,7 @@ function TodoApp() {
 export default TodoApp
 
 const styles = StyleSheet.create({
-    
+  container: {
+    marginTop: 30,
+  }
 })
