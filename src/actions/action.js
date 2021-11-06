@@ -1,8 +1,8 @@
-let id = 3
+import { v4 } from 'uuid'
 
 export const addTodo = (item) => ({
   type: 'ADD_TODO',
-  id: id++,
+  id: v4(),
   text: item.text
 })
 
@@ -13,11 +13,6 @@ export const deleteTodo = (item) => ({
 
 export const toggleTodo = (item) => ({
   type: 'TOGGLE_TODO',
-  item
-})
-
-export const editTodo = (item) => ({
-  type: 'EDIT_TODO',
   item
 })
 

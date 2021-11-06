@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text, TextInput, TouchableOpacity, Button } from 'react-native'
+import { View, Text } from 'react-native'
 import { toggleTodo, deleteTodo } from '../actions/action'
 import { connect } from 'react-redux'
 
@@ -9,12 +9,7 @@ function TodoList({ todos, dispatch }) {
   }
 
   function deleteHandlerChange(item) {
-    console.log('delete' + item.text)
     dispatch(deleteTodo(item))
-  }
-
-  function editHandlerChange(item) {
-    console.log('edit' + item.text)
   }
 
   return(
@@ -26,13 +21,12 @@ function TodoList({ todos, dispatch }) {
           
           <Text 
             style={{ textDecorationLine: item.completed? 'line-through': 'none' }}
-            key={item.id}>
+            key={item.id}
+          >
               { item.id } { item.text } 
           </Text>
 
           <Text> {item.completed? 'done' : 'uncompleted'} </Text>
-
-          <Text onPress={() => editHandlerChange(item)}>edit </Text>
           <Text onPress={() => deleteHandlerChange(item)}>delete </Text>
         </View>
       ))}

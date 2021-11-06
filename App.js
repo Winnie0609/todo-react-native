@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet } from 'react-native';
 import TodoApp from './src/TodoApp'
 import store from './src/store'
 import { Provider } from 'react-redux'
 
 export default function App() {
-  
   return (
     <Provider store={store}>
       <TodoApp/>

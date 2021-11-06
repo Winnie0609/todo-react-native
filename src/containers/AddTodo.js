@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native'
-import { useSelector, useDispatch } from "react-redux"
 import { Ionicons } from '@expo/vector-icons'
 import { connect } from 'react-redux'
-import { addTodo, toggleTodo, deleteTodo } from '../actions/action'
+import { addTodo } from '../actions/action'
 
 function AddTodo({ dispatch }) {
   const [inputText, setInputText] = useState('')
-
+  
   function inputHandleChange(text) {
     setInputText(text)
   }
@@ -21,6 +20,7 @@ function AddTodo({ dispatch }) {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
+
         <TextInput
           value={inputText}
           style={styles.input}
@@ -58,13 +58,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#eaeaea',
     height: 50,
     flex: 1,
-    padding: 5
+    padding: 5,
+    borderBottomLeftRadius: 50,
+    borderTopLeftRadius: 50,
   },
   icon: {
     backgroundColor: '#eaeaea',
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingRight: 10,
+    padding: 10,
+    borderRadius: 50,
   }
 })
