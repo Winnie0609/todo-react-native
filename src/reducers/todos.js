@@ -3,7 +3,7 @@ const initialState = [
   { text: 'Buy Milk', id: 'sdah-235-xsa', completed: false },
 ]
 
-const todos = (state = [], action) => {
+const todos = (state = initialState, action) => {
 
   switch(action.type) {
     case 'ADD_TODO':

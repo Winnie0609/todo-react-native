@@ -8,8 +8,8 @@ function TodoApp() {
   return (
     <View style={ styles.container }>
       <FilterBar />
-      <AddTodo/>
-      <FilteredTodoList/>
+      <AddTodo />
+      <FilteredTodoList />
     </View>
   ) 
 }

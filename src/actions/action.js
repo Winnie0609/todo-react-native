@@ -1,8 +1,8 @@
-import { v4 } from 'uuid'
+let id = 10
 
 export const addTodo = (item) => ({
   type: 'ADD_TODO',
-  id: v4(),
+  id: id++,
   text: item.text
 })
 
